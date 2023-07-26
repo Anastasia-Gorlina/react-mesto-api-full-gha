@@ -1,0 +1,15 @@
+.element__vector {
+  background-color: transparent;
+  transition: opacity .3s linear;
+  background-image: url(../../../images/like.svg);
+  background-repeat: no-repeat;
+  width: 22px;
+  height: 19px;
+  cursor: pointer;
+  border: none;
+  margin: 0px;
+}
+
+.element__vector:hover {
+  opacity: .5;
+}

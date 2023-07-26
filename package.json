@@ -1,0 +1,11 @@
+{
+  "name": "react-mesto-api-full-gha",
+  "version": "1.0.0",
+  "description": "сервис \"Mesto\" (api full) -<br />\r проектная работа включает в себя фронтенд и бэкенд части приложения со следующими возможностями: авторизации и регистрации пользователей, операции с карточками и пользователями. Была реализована в рамках 15-ой проектной работы на платформе [Яндекс.Практикум](https://praktikum.yandex.ru/web/)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

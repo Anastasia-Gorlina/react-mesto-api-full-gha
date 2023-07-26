@@ -1,0 +1,21 @@
+.auth__label {
+    min-width: 358px;
+    min-height: 27px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    }
+    
+    .auth__label :nth-child(2) {
+        margin-top: 30px;
+    }
+    
+    @media screen and (max-width: 650px) {
+        .auth__label  {
+            margin-top: 75px;
+        }
+    
+        .auth__label :nth-last-child(2) {
+            margin-bottom: 45px;
+        }
+    } 
