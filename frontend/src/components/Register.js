@@ -28,8 +28,7 @@ function Register ({registration}) {
     datastartPage.password = password;
     registration(datastartPage);
     }
-
-
+    
   return (
     <div className="auth__container">
     <h2 className="auth__name">Регистрация</h2>

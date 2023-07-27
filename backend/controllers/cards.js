@@ -11,7 +11,6 @@ module.exports.getCards = (request, response, next) => Card.find({})
 // удаляет карточку по _id
 module.exports.deleteCard = (request, response, next) => {
   const { id } = request.params;
-
   Card.findById(id)
     .orFail(() => new NotFoundError(`Карточка с id ${id} не найдена`))
     .then((card) => {
@@ -62,9 +61,8 @@ module.exports.likeCard = (request, response, next) => {
 
 module.exports.dislikeCard = (request, response, next) => {
   Card.findByIdAndUpdate(
-  // console.log(request.user._id),
     request.params.id,
-    { $pull: { likes: request.user._id } }, // убрать _id из массива
+    { $pull: { likes: request.user._id } },
     { new: true },
   )
     .then((card) => {

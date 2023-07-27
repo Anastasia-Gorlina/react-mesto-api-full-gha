@@ -96,7 +96,22 @@ export class Api {
         }).then((res) => this._addResult(res))
     };*/
 
+     //метод проверки ответа от сервера
+     _checkResponse(response) {
+        // тут проверка ответа
+        if (response.ok) {
+            return response.json();
+        }
+        return Promise.reject(`Ошибка ${response.status}`);
     }
+
+    getCrash() {
+        return fetch(`${this._adress}/crash-test`, {
+            method: "GET",
+        })
+        .then(this._checkResponse);
+    }
+  }
     
     export const api = new Api({
         baseUrl:'https://mesto.nomoreparties.co/v1/cohort-64',

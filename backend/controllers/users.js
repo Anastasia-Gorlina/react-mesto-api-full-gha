@@ -5,6 +5,8 @@ const NotFoundError = require('../errors/not-found-error');
 const BadRequestError = require('../errors/bad-request-error');
 const ConflictError = require('../errors/conflict-error');
 
+const { NODE_ENV, JWT_SECRET } = process.env;
+
 // возвращает всех пользователей
 module.exports.getUsers = (request, response, next) => User.find({})
   .then((users) => response.status(200).send({ data: users }))
@@ -59,7 +61,8 @@ module.exports.login = (request, response, next) => {
   const { email, password } = request.body;
   return User.findUserByCredentials(email, password)
     .then((user) => {
-      const token = jwt.sign({ _id: user._id }, 'super-strong-secret');
+      // const token = jwt.sign({ _id: user._id }, 'super-strong-secret');
+      const token = jwt.sign({ _id: user._id }, NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret');
       response
         .cookie('jwt', token, {
           maxAge: 3600000 * 24 * 7,
