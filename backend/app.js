@@ -29,8 +29,8 @@ app.get('/crash-test', () => {
 // Массив доменов, с которых разрешены кросс-доменные запросы
 const allowedCors = [
   'http://localhost:3006',
-  'http://prk-web.nomoredomains.work',
-  'https://prk-web.nomoredomains.work',
+  'http://anastasia.gorlina.back.nomoreparties.co',
+  'https://anastasia.gorlina.back.nomoreparties.co',
 ];
 
 app.use((req, res, next) => {

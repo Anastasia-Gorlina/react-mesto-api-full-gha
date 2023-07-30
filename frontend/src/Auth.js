@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://prk-web.nomoredomains.work';
+export const BASE_URL = 'https://anastasia.gorlina.front.nomoreparties.co';
 
 // проверка ответа от сервера
 const checkResponse = (response) => {

@@ -14,7 +14,7 @@ import Login from './Login';
 import Register from './Register';
 import ProtectedRoute from './ProtectedRoute';
 import * as Auth from '../Auth';
-import InfoTooltip from './InfoTooltip';
+import InfoToolTip from './InfoToolTip';
 import NavBar from './NavBar';
 import success from "../images/success.svg";
 import error from "../images/error.svg";
@@ -289,7 +289,7 @@ function App() {
 
       </Routes >
 
-      <InfoTooltip 
+      <InfoToolTip 
         isOpen={showToolTip} 
         onClose={closeAllPopups} 
         info={info}
