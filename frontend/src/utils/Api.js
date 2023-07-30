@@ -114,7 +114,7 @@ export class Api {
   }
     
     export const api = new Api({
-        baseUrl:'https://mesto.nomoreparties.co/v1/cohort-64',
+        baseUrl:'https://prk-web.nomoredomains.work',
         headers: {
             authorization: 'e44d19ac-dce7-428a-9146-8b8a14ccbad7',
             'Content-Type': 'application/json'

@@ -29,7 +29,8 @@ app.get('/crash-test', () => {
 // Массив доменов, с которых разрешены кросс-доменные запросы
 const allowedCors = [
   'http://localhost:3006',
-
+  'http://prk-web.nomoredomains.work',
+  'https://prk-web.nomoredomains.work',
 ];
 
 app.use((req, res, next) => {

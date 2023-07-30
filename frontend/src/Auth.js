@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://auth.nomoreparties.co';
+export const BASE_URL = 'https://prk-web.nomoredomains.work';
 
 // проверка ответа от сервера
 const checkResponse = (response) => {
