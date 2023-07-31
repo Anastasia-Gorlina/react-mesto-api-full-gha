@@ -114,7 +114,7 @@ export class Api {
   }
     
     export const api = new Api({
-        baseUrl:'https://anastasia.gorlina.front.nomoreparties.co',
+        baseUrl:'https://anastasia.gorlina.back.nomoreparties.co',
         headers: {
             authorization: 'e44d19ac-dce7-428a-9146-8b8a14ccbad7',
             'Content-Type': 'application/json'

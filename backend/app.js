@@ -31,6 +31,8 @@ const allowedCors = [
   'http://localhost:3006',
   'http://anastasia.gorlina.back.nomoreparties.co',
   'https://anastasia.gorlina.back.nomoreparties.co',
+  'http://anastasia.gorlina.front.nomoreparties.co',
+  'https://anastasia.gorlina.front.nomoreparties.co',
 ];
 
 app.use((req, res, next) => {
