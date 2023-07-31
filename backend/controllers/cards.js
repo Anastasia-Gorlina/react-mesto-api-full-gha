@@ -48,7 +48,7 @@ module.exports.likeCard = (request, response, next) => {
       if (!card) {
         throw new NotFoundError(`Запрашиваемый пользователь с id ${request.params.id} не найден`);
       }
-      return response.status(201).send(card);
+      return response.status(200).send(card);
     })
     .catch((error) => {
       if (error.name === 'CastError') {
@@ -69,7 +69,7 @@ module.exports.dislikeCard = (request, response, next) => {
       if (!card) {
         throw new NotFoundError(`Запрашиваемый пользователь с id ${request.params.id} не найден`);
       }
-      return response.status(201).send(card);
+      return response.status(200).send(card);
     })
     .catch((error) => {
       if (error.name === 'CastError') {

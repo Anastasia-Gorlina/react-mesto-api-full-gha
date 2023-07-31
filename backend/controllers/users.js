@@ -23,9 +23,7 @@ module.exports.getUserId = (request, response, next) => {
       return response.status(200).json(userFound);
     })
     .catch((error) => {
-      if (error.name === 'ValidationError') {
-        next(new BadRequestError(`${Object.values(error.errors).map((err) => err.message).join(', ')}`));
-      } else if (error.name === 'CastError') {
+      if (error.name === 'CastError') {
         next(new BadRequestError(`Переданный id ${idUser} не корректен`));
       } else {
         next(error);
