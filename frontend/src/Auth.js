@@ -13,9 +13,9 @@ export const register = (email, password) => {
     return fetch(`${BASE_URL}/sign-up`, {
         method: 'POST',
         headers: {
-        //'Accept': 'application/json',
-        'Content-Type': 'application/json'
-        },
+            //'Accept': 'application/json',
+            'Content-Type': 'application/json'
+            },
         body: JSON.stringify({password, email})
     })
     .then(addResult)
@@ -29,7 +29,7 @@ export const authorize = (email, password) => {
         headers: {
             //'Accept': 'application/json',
             'Content-Type': 'application/json'
-        },
+            },
         credentials: 'include', // теперь куки посылаются вместе с запросом
         body: JSON.stringify({email, password})
     })
@@ -44,11 +44,12 @@ export const authorize = (email, password) => {
 };
 
 export const logout = () => {
-    return fetch(`${BASE_URL}/signout`, {
+    return fetch(`${BASE_URL}/sign-out`, {
         method: "GET",
         headers: {
+            //'Accept': 'application/json',
             'Content-Type': 'application/json'
-        },
+            },
         credentials: "include",
     })
     .then(addResult)

@@ -101,7 +101,7 @@ export class Api {
         return fetch(`${this._adress}/crash-test`, {
             method: "GET",
         })
-        .then(this._checkResponse);
+        .then(this._addResult);
     }
   }
     
