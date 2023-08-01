@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://anastasia.gorlina.back.nomoreparties.co';
+export const BASE_URL = 'http://localhost:3006/';
 
 // проверка ответа от сервера
 const addResult = (res) => {

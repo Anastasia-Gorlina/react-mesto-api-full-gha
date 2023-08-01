@@ -30,7 +30,7 @@ router.delete(
   // валидация
   celebrate({
     params: Joi.object().keys({
-      id: Joi.string().hex().length(24),
+      id: Joi.string().hex().length(24).required(),
     }),
   }),
   deleteCard,
@@ -41,7 +41,7 @@ router.put(
   // валидация
   celebrate({
     params: Joi.object().keys({
-      id: Joi.string().hex().length(24),
+      id: Joi.string().hex().length(24).required(),
     }),
   }),
   likeCard,
@@ -52,7 +52,7 @@ router.delete(
   // валидация
   celebrate({
     params: Joi.object().keys({
-      id: Joi.string().hex().length(24),
+      id: Joi.string().hex().length(24).required(),
     }),
   }),
   dislikeCard,

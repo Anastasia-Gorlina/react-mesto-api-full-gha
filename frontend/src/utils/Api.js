@@ -106,7 +106,7 @@ export class Api {
   }
     
     export const api = new Api({
-        baseUrl: 'https://anastasia.gorlina.back.nomoreparties.co'    
+        baseUrl: 'http://localhost:3006'
     }); 
 
     export default api;
