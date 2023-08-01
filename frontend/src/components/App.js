@@ -221,7 +221,7 @@ function App() {
 // хук для автологина при обновлении страницы
 // если получаем данные пользователя значит, авторизационные куки передаются успешно
   useEffect(() => {
-    api.getUserData()
+    api.getUserInfo()
       .then((res) => {
         if (res) {
           setLoggedIn(true);
