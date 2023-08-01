@@ -36,7 +36,6 @@ const allowedCors = [
 ];
 
 app.use((req, res, next) => {
-  // Сохраняем источник запроса в переменную origin и проверяем, что источник запроса есть среди разрешённых
   const { origin } = req.headers;
   const { method } = req; // Сохра няем тип запроса (HTTP-метод) в соответствующую переменную
   const requestHeaders = req.headers['access-control-request-headers'];

@@ -1,10 +1,10 @@
 export const BASE_URL = 'https://anastasia.gorlina.back.nomoreparties.co';
 
 // проверка ответа от сервера
-const addResult(res) {
+const addResult = (res) => {
     // тут проверка ответа
     if (res.ok) {
-        return res.json()
+        return res.json();
     }
     return Promise.reject(`Ошибка: ${res.status}`);
 };
