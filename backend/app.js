@@ -37,7 +37,7 @@ const allowedCors = [
 
 app.use((req, res, next) => {
   const { origin } = req.headers;
-  const { method } = req; // Сохра няем тип запроса (HTTP-метод) в соответствующую переменную
+  const { method } = req; // Сохраняем тип запроса (HTTP-метод) в соответствующую переменную
   const requestHeaders = req.headers['access-control-request-headers'];
   // Значение для заголовка Access-Control-Allow-Methods по умолчанию (разрешены все типы запросов)
   const DEFAULT_ALLOWED_METHODS = 'GET,HEAD,PUT,PATCH,POST,DELETE';
