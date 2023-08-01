@@ -29,11 +29,11 @@ app.get('/crash-test', () => {
 // Массив доменов, с которых разрешены кросс-доменные запросы
 const allowedCors = [
   'http://localhost:3006',
-  'http://localhost:3003',
-  // 'http://anastasia.gorlina.back.nomoreparties.co',
-  // 'https://anastasia.gorlina.back.nomoreparties.co',
-  // 'http://anastasia.gorlina.front.nomoreparties.co',
-  // 'https://anastasia.gorlina.front.nomoreparties.co',
+//  'http://localhost:3003',
+  'http://anastasia.gorlina.back.nomoreparties.co',
+  'https://anastasia.gorlina.back.nomoreparties.co',
+  'http://anastasia.gorlina.front.nomoreparties.co',
+  'https://anastasia.gorlina.front.nomoreparties.co',
 ];
 
 app.use((req, res, next) => {
