@@ -8,13 +8,6 @@ export class Api {
         return Promise.all([this.getInitialCards(), this.getUserInfo()])
     }
 
-    _addResult(res) {
-        if (res.ok) {
-            return res.json()
-        }
-        return Promise.reject(`Ошибка: ${res.status}`);
-    };
-
     getInitialCards = () => {
         return fetch(`${this._url}/cards`, {
             method: 'GET',
@@ -96,14 +89,13 @@ export class Api {
         }).then((res) => this._addResult(res))
     };*/
 
-     //метод проверки ответа от сервера
-     _checkResponse(response) {
+    _addResult(res) {
         // тут проверка ответа
-        if (response.ok) {
-            return response.json();
+        if (res.ok) {
+            return res.json()
         }
-        return Promise.reject(`Ошибка ${response.status}`);
-    }
+        return Promise.reject(`Ошибка: ${res.status}`);
+    };
 
     getCrash() {
         return fetch(`${this._adress}/crash-test`, {

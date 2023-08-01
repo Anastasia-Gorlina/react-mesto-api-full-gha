@@ -1,12 +1,13 @@
 export const BASE_URL = 'https://anastasia.gorlina.back.nomoreparties.co';
 
 // проверка ответа от сервера
-const checkResponse = (response) => {
-    if (response.ok) {
-        return response.json();
+const addResult(res) {
+    // тут проверка ответа
+    if (res.ok) {
+        return res.json()
     }
-    return Promise.reject(`Ошибка ${response.status}`);
-}
+    return Promise.reject(`Ошибка: ${res.status}`);
+};
 
 export const register = (email, password) => {
     return fetch(`${BASE_URL}/sign-up`, {
@@ -17,7 +18,7 @@ export const register = (email, password) => {
         },
         body: JSON.stringify({password, email})
     })
-    .then(checkResponse)
+    .then(addResult)
 };
 
 // функция, которая будет проверять логин и пароль пользователя
@@ -32,7 +33,7 @@ export const authorize = (email, password) => {
         credentials: 'include', // теперь куки посылаются вместе с запросом
         body: JSON.stringify({email, password})
     })
-    .then(checkResponse)
+    .then(addResult)
     /*.then((data) => {
         //console.log(data)
         // сохраняем токен в localStorage
@@ -50,6 +51,6 @@ export const logout = () => {
         },
         credentials: "include",
     })
-    .then(checkResponse)
+    .then(addResult)
     .catch(err => console.log(err))
 }
