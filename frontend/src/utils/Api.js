@@ -98,7 +98,7 @@ export class Api {
     };
 
     getCrash() {
-        return fetch(`${this._adress}/crash-test`, {
+        return fetch(`${this._url}/crash-test`, {
             method: "GET",
         })
         .then(this._addResult);
@@ -106,7 +106,7 @@ export class Api {
   }
     
     export const api = new Api({
-        baseUrl:'https://anastasia.gorlina.back.nomoreparties.co'    
+        baseUrl: 'https://anastasia.gorlina.back.nomoreparties.co'    
     }); 
 
     export default api;
