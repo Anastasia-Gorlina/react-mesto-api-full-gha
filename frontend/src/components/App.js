@@ -161,7 +161,7 @@ function App() {
 
   function registration({email, password}) {
     Auth.register(email, password)
-    .then((response) => {
+    .then((res) => {
       setTimeout(setShowToolTip, 1000, true);
       ChooseInfoTooltip({
         image: success,
