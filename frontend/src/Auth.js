@@ -9,7 +9,7 @@ const addResult = (res) => {
     return Promise.reject(`Ошибка: ${res.status}`);
 };
 
-export const register = (email, password) => {
+export const registration = (email, password) => {
     return fetch(`${BASE_URL}/sign-up`, {
         method: 'POST',
         headers: {
